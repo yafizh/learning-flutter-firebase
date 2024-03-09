@@ -74,7 +74,7 @@ class _RegisterState extends State<Register> {
                     ? 'Enter a password 6+ chars long'
                     : null,
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.pink[400],
@@ -89,20 +89,20 @@ class _RegisterState extends State<Register> {
                         email, password);
                     if (result == null) {
                       setState(() {
-                        error = 'please supply a valid email';
+                        error = 'Invalid email or password';
                       });
                     }
                   }
                 },
-                child: Text(
+                child: const Text(
                   "Register",
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              SizedBox(height: 12.0),
+              const SizedBox(height: 12.0),
               Text(
                 error,
-                style: TextStyle(color: Colors.red, fontSize: 14.0),
+                style: const TextStyle(color: Colors.red, fontSize: 14.0),
               )
             ],
           ),
