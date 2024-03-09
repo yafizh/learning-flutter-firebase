@@ -1,15 +1,13 @@
-import 'package:brew_crew/models/user.dart';
 import 'package:brew_crew/services/auth.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
-
+class Register extends StatefulWidget {
   @override
-  State<SignIn> createState() => _SignInState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+class _RegisterState extends State<Register> {
+
   final AuthService _auth = AuthService();
 
   String email = '';
@@ -23,7 +21,7 @@ class _SignInState extends State<SignIn> {
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
         title: Text(
-          'Sign in to Brew Crew',
+          'Sign up to Brew Crew',
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -63,7 +61,7 @@ class _SignInState extends State<SignIn> {
                   print(password);
                 },
                 child: Text(
-                  "Sign in",
+                  "Register",
                   style: TextStyle(color: Colors.white),
                 ),
               )
